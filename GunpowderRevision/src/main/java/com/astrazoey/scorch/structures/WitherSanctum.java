@@ -1,5 +1,5 @@
 package com.astrazoey.scorch.structures;
-
+/*
 import com.astrazoey.scorch.GunpowderRevision;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
@@ -44,6 +44,7 @@ public class WitherSanctum extends StructureFeature<DefaultFeatureConfig> {
     private static final Pool<SpawnSettings.SpawnEntry> STRUCTURE_MONSTERS = Pool.of(
             new SpawnSettings.SpawnEntry(EntityType.WITHER_SKELETON, 100, 3, 7)
     );
+
     @Override
     public Pool<SpawnSettings.SpawnEntry> getMonsterSpawns() {
         return STRUCTURE_MONSTERS;
@@ -187,3 +188,4 @@ public class WitherSanctum extends StructureFeature<DefaultFeatureConfig> {
         return false;
     }
 }
+*/

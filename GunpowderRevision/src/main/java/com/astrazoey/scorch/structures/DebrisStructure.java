@@ -1,9 +1,9 @@
 package com.astrazoey.scorch.structures;
-
+/*
 import com.astrazoey.scorch.GunpowderRevision;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
-import net.minecraft.structure.MarginedStructureStart;
+//import net.minecraft.structure.MarginedStructureStart;
 import net.minecraft.structure.PoolStructurePiece;
 import net.minecraft.structure.StructureManager;
 import net.minecraft.structure.pool.StructurePoolBasedGenerator;
@@ -15,7 +15,7 @@ import net.minecraft.util.registry.Registry;
 import net.minecraft.world.HeightLimitView;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.source.BiomeSource;
-import net.minecraft.world.gen.ChunkRandom;
+//import net.minecraft.world.gen.ChunkRandom;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
 import net.minecraft.world.gen.chunk.VerticalBlockSample;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
@@ -52,7 +52,7 @@ public class DebrisStructure extends StructureFeature<DefaultFeatureConfig> {
         return STRUCTURE_CREATURES;
     }
     */
-
+/*
     @Override
     protected boolean shouldStartAt(ChunkGenerator chunkGenerator, BiomeSource biomeSource, long seed, ChunkRandom chunkRandom, ChunkPos chunkPos, Biome biome, ChunkPos chunkPos2, DefaultFeatureConfig featureConfig, HeightLimitView heightLimitView) {
 
@@ -116,3 +116,4 @@ public class DebrisStructure extends StructureFeature<DefaultFeatureConfig> {
     }
 
 }
+*/

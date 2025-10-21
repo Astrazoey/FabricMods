@@ -1,5 +1,5 @@
 package com.astrazoey.scorch.mixins;
-
+/*
 import com.astrazoey.scorch.GunpowderRevisionStructures;
 import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.collection.Pool;
@@ -16,6 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(NoiseChunkGenerator.class)
 public class NoiseChunkGeneratorMixin {
 
+    /*
     @Inject(
             method = "getEntitySpawnList(Lnet/minecraft/world/biome/Biome;Lnet/minecraft/world/gen/StructureAccessor;Lnet/minecraft/entity/SpawnGroup;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/collection/Pool;",
             at = @At(value = "HEAD"),
@@ -37,19 +38,23 @@ public class NoiseChunkGeneratorMixin {
      *
      * This way of doing structure mob spawning will prevent biome's mobs from spawning in the structure.
      */
+    /*
     private static Pool<SpawnSettings.SpawnEntry> getStructureSpawns(Biome biome, StructureAccessor accessor, SpawnGroup group, BlockPos pos){
 
         if (group == SpawnGroup.MONSTER) {
-            if (accessor.getStructureAt(pos, true, GunpowderRevisionStructures.WITHER_SANCTUM).hasChildren()) {
+            if (accessor.getStructureAt(pos, GunpowderRevisionStructures.WITHER_SANCTUM).hasChildren()) {
                 return GunpowderRevisionStructures.WITHER_SANCTUM.getMonsterSpawns();
             }
         }
         else if (group == SpawnGroup.CREATURE) {
-            if (accessor.getStructureAt(pos, true, GunpowderRevisionStructures.WITHER_SANCTUM).hasChildren()) {
+            if (accessor.getStructureAt(pos, GunpowderRevisionStructures.WITHER_SANCTUM).hasChildren()) {
                 return GunpowderRevisionStructures.WITHER_SANCTUM.getCreatureSpawns();
             }
         }
 
         return null;
     }
+
+
 }
+     */

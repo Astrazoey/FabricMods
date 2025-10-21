@@ -21,7 +21,7 @@ public class LuckEnchantmentMixin extends Enchantment {
         if(stack.getItem() instanceof MattockItem) {
             return true;
         } else {
-            return this.type.isAcceptableItem(stack.getItem());
+            return this.target.isAcceptableItem(stack.getItem());
         }
     }
 }

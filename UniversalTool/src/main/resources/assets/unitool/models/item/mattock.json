@@ -1,6 +1,6 @@
 {
   "parent" : "item/handheld",
   "textures" : {
-      "layer0" : "unitool:items/mattock"
+      "layer0" : "unitool:item/mattock"
   }
 }

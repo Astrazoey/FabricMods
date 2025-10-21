@@ -5,7 +5,7 @@ import net.minecraft.item.Item.Settings;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.MiningToolItem;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.tag.BlockTags;
+import net.minecraft.registry.tag.BlockTags;
 
 public class MattockItem extends MattockTypeItem {
     protected MattockItem(ToolMaterial material, int attackDamage, float attackSpeed, Settings settings) {

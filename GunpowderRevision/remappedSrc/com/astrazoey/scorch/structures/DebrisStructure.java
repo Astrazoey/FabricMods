@@ -1,5 +1,6 @@
 package com.astrazoey.scorch.structures;
 
+import StructureStartFactory;
 import com.astrazoey.scorch.GunpowderRevision;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
@@ -94,7 +95,7 @@ public class DebrisStructure extends StructureFeature<DefaultFeatureConfig> {
                     .get(new Identifier(GunpowderRevision.MOD_ID, "debris_structure/start_pool")),
                     5); //how many pieces outward from the center a jigsaw structure can spawn
 
-            StructurePoolBasedGenerator.method_30419(
+            StructurePoolBasedGenerator.generate(
                     dynamicRegistryManager,
                     structureSettingsAndStartPool,
                     PoolStructurePiece::new,

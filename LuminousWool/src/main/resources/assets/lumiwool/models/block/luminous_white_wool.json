@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "lumiwool:item/luminous_white_wool"
-  }
-}

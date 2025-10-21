@@ -10,23 +10,20 @@ import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.attribute.EntityAttributeModifier.Operation;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ToolItem;
-import net.minecraft.item.ToolMaterial;
-import net.minecraft.item.Vanishable;
-import net.minecraft.tag.Tag;
+import net.minecraft.item.*;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class MattockTypeItem extends ToolItem implements Vanishable {
-    private final Tag<Block> effectiveBlocks;
+
+
     protected final float miningSpeed;
     private final float attackDamage;
     private final Multimap<EntityAttribute, EntityAttributeModifier> attributeModifiers;
 
-    protected MattockTypeItem(float attackDamage, float attackSpeed, ToolMaterial material, Tag<Block> effectiveBlocks, Settings settings) {
+    protected MattockTypeItem(float attackDamage, float attackSpeed, ToolMaterial material, TagKey<Block> effectiveBlocks, Settings settings) {
         super(material, settings);
-        this.effectiveBlocks = effectiveBlocks;
         this.miningSpeed = material.getMiningSpeedMultiplier();
         this.attackDamage = attackDamage + material.getAttackDamage();
         Builder<EntityAttribute, EntityAttributeModifier> builder = ImmutableMultimap.builder();
@@ -36,7 +33,7 @@ public class MattockTypeItem extends ToolItem implements Vanishable {
     }
 
     public float getMiningSpeedMultiplier(ItemStack stack, BlockState state) {
-        return this.effectiveBlocks.contains(state.getBlock()) ? this.miningSpeed : 1.0F;
+        return this.miningSpeed;
     }
 
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
@@ -67,4 +64,5 @@ public class MattockTypeItem extends ToolItem implements Vanishable {
     public boolean isSuitableFor(BlockState state) {
         return true;
     }
+
 }

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/carpet",
-  "textures": {
-    "wool": "lumiwool:item/luminous_gray_wool"
-  }
-}

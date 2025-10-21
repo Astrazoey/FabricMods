@@ -1,5 +1,6 @@
 package com.astrazoey.scorch;
 
+import com.astrazoey.scorch.registry.GunpowderRevisionSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -10,6 +11,7 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -29,9 +31,10 @@ public class IgnistoneBlock extends Block {
     public void onBreak(World world, BlockPos pos, BlockState state, PlayerEntity player) {
         ItemStack stack = player.getMainHandStack();
         if ((EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0) && (!player.isCreative())) {
-            world.playSound(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.ITEM_BUCKET_EMPTY_LAVA, SoundCategory.BLOCKS, 1.0f, 0.75f, true);
+            world.playSound(pos.getX(), pos.getY(), pos.getZ(), GunpowderRevisionSounds.IGNISTONE_DROPS_LAVA_EVENT, SoundCategory.BLOCKS, 1.0f, 0.75f, true);
         }
         super.onBreak(world,pos,state,player);
+
     }
 
 
@@ -40,6 +43,10 @@ public class IgnistoneBlock extends Block {
         super.afterBreak(world, player, pos, state, blockEntity, stack);
         if ((EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) == 0) && (!player.isCreative())) {
             placeLava(world, pos);
+        } else if (EnchantmentHelper.getLevel(Enchantments.SILK_TOUCH, stack) > 0) {
+            if (player instanceof ServerPlayerEntity) {
+                GunpowderRevision.MINE_IGNISTONE.trigger((ServerPlayerEntity)player);
+            }
         }
     }
 

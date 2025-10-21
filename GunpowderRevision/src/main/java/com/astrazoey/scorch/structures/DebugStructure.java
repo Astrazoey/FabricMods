@@ -1,5 +1,5 @@
 package com.astrazoey.scorch.structures;
-
+/*
 import com.astrazoey.scorch.GunpowderRevision;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
@@ -52,7 +52,7 @@ public class DebugStructure extends StructureFeature<DefaultFeatureConfig> {
         return STRUCTURE_CREATURES;
     }
     */
-
+/*
     @Override
     protected boolean shouldStartAt(ChunkGenerator chunkGenerator, BiomeSource biomeSource, long seed, ChunkRandom chunkRandom, ChunkPos chunkPos, Biome biome, ChunkPos chunkPos2, DefaultFeatureConfig featureConfig, HeightLimitView heightLimitView) {
 
@@ -114,3 +114,4 @@ public class DebugStructure extends StructureFeature<DefaultFeatureConfig> {
     }
 
 }
+*/

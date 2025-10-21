@@ -20,11 +20,10 @@ public class GunpowderRevisionBlocks {
 
     private static Block.Settings pyrack() {
         return FabricBlockSettings
-                .of(Material.WOOD)
+                .of(Material.STONE)
                 .sounds(BlockSoundGroup.NETHERRACK)
                 .strength(3.0f, 0.4f)
                 .breakByTool(FabricToolTags.PICKAXES);
-
     }
 
     private static Block.Settings primedPyrack() {
@@ -56,5 +55,4 @@ public class GunpowderRevisionBlocks {
         Registry.register(Registry.BLOCK, new Identifier(GunpowderRevision.MOD_ID, "primed_pyrack"), PRIMED_PYRACK);
         Registry.register(Registry.BLOCK, new Identifier(GunpowderRevision.MOD_ID, "ignistone"), IGNISTONE);
     }
-
 }

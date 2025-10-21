@@ -26,7 +26,7 @@ public class ShearStriderCriterion extends AbstractCriterion<com.astrazoey.scorc
     }
 
     public void trigger(ServerPlayerEntity player) {
-        this.test(player, (conditions) -> {
+        this.trigger(player, (conditions) -> {
             return conditions.matches(player);
         });
     }

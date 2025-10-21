@@ -40,13 +40,13 @@ public class NoiseChunkGeneratorMixin {
     private static Pool<SpawnSettings.SpawnEntry> getStructureSpawns(Biome biome, StructureAccessor accessor, SpawnGroup group, BlockPos pos){
 
         if (group == SpawnGroup.MONSTER) {
-            if (accessor.getStructureAt(pos, true, GunpowderRevisionStructures.DEBUG_STRUCTURE).hasChildren()) {
-                return GunpowderRevisionStructures.DEBUG_STRUCTURE.getMonsterSpawns();
+            if (accessor.getStructureAt(pos, true, GunpowderRevisionStructures.WITHER_SANCTUM).hasChildren()) {
+                return GunpowderRevisionStructures.WITHER_SANCTUM.getMonsterSpawns();
             }
         }
         else if (group == SpawnGroup.CREATURE) {
-            if (accessor.getStructureAt(pos, true, GunpowderRevisionStructures.DEBUG_STRUCTURE).hasChildren()) {
-                return GunpowderRevisionStructures.DEBUG_STRUCTURE.getCreatureSpawns();
+            if (accessor.getStructureAt(pos, true, GunpowderRevisionStructures.WITHER_SANCTUM).hasChildren()) {
+                return GunpowderRevisionStructures.WITHER_SANCTUM.getCreatureSpawns();
             }
         }
 

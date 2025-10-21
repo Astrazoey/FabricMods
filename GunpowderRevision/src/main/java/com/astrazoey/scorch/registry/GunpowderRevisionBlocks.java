@@ -22,8 +22,7 @@ public class GunpowderRevisionBlocks {
         return FabricBlockSettings
                 .of(Material.STONE)
                 .sounds(BlockSoundGroup.NETHERRACK)
-                .strength(3.0f, 0.4f)
-                .breakByTool(FabricToolTags.PICKAXES);
+                .strength(3.0f, 0.4f);
     }
 
     private static Block.Settings primedPyrack() {
@@ -31,7 +30,6 @@ public class GunpowderRevisionBlocks {
                 .of(Material.STONE)
                 .sounds(BlockSoundGroup.NETHERRACK)
                 .strength(3.0f, 500f)
-                .breakByTool(FabricToolTags.PICKAXES)
                 //.emissiveLighting((state, world, pos) -> true)
                 .luminance(3);
     }
@@ -40,8 +38,7 @@ public class GunpowderRevisionBlocks {
         return FabricBlockSettings
                 .of(Material.STONE)
                 .sounds(BlockSoundGroup.STONE)
-                .strength(3.0f, 6.0f)
-                .breakByTool(FabricToolTags.PICKAXES);
+                .strength(3.0f, 6.0f);
     }
 
     public static final Block PYRACK = new PyrackBlock(pyrack());

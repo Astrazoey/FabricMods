@@ -16,7 +16,7 @@ public class MattockToolMaterial implements ToolMaterial {
 
     @Override
     public float getMiningSpeedMultiplier() {
-        return 12.0f;
+        return 5.0f;
     }
 
     @Override

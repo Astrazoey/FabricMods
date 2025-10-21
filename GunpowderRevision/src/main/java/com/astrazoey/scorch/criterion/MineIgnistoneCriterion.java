@@ -22,7 +22,7 @@ public class MineIgnistoneCriterion extends AbstractCriterion<MineIgnistoneCrite
     }
 
     public void trigger(ServerPlayerEntity player) {
-        this.test(player, (conditions) -> {
+        this.trigger(player, (conditions) -> {
             return conditions.matches(player);
         });
     }

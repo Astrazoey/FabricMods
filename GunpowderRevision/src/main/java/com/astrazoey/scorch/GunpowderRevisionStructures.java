@@ -1,5 +1,5 @@
 package com.astrazoey.scorch;
-
+/*
 import com.astrazoey.scorch.structures.DebrisStructure;
 import com.astrazoey.scorch.structures.DebugStructure;
 import com.astrazoey.scorch.structures.WitherSanctum;
@@ -25,7 +25,7 @@ public class GunpowderRevisionStructures {
                         7, //minimum distance apart in chunks
                         452782645 //structure seed to prevent structures spawning over each other
                 ))
-                .superflatFeature(DEBUG_STRUCTURE.configure(FeatureConfig.DEFAULT))
+                //.superflatFeature(DEBUG_STRUCTURE.configure(FeatureConfig.DEFAULT))
                 //.adjustsSurface() //if surrounding land will be modified to conform to bottom of the structure
                 .register();
 
@@ -36,7 +36,7 @@ public class GunpowderRevisionStructures {
                         8, //minimum distance apart in chunks
                         655703111 //structure seed to prevent structures spawning over each other
                 ))
-                .superflatFeature(DEBRIS_STRUCTURE.configure(FeatureConfig.DEFAULT))
+                //.superflatFeature(DEBRIS_STRUCTURE.configure(FeatureConfig.DEFAULT))
                 //.adjustsSurface() //if surrounding land will be modified to conform to bottom of the structure
                 .register();
 
@@ -47,10 +47,11 @@ public class GunpowderRevisionStructures {
                         4, //minimum distance apart in chunks
                         736186643 //structure seed to prevent structures spawning over each other
                 ))
-                .superflatFeature(WITHER_SANCTUM.configure(FeatureConfig.DEFAULT))
+                //.superflatFeature(WITHER_SANCTUM.configure(FeatureConfig.DEFAULT))
                 .adjustsSurface() //if surrounding land will be modified to conform to bottom of the structure
                 .register();
 
     }
 
 }
+*/
